@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Director {
@@ -5,7 +6,7 @@ public class Director {
     private String name;
     private String surname;
     private int numDirectedMovie;
-    private Date dob;
+    private LocalDate dob;
 
     public Director() {
     }
@@ -31,11 +32,11 @@ public class Director {
         this.numDirectedMovie = numDirectedMovie;
     }
 
-    public Date getDob() {
+    public LocalDate getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(LocalDate dob) {
         this.dob = dob;
     }
 

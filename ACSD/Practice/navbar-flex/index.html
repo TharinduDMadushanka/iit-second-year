@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Flex</title>
+
+    <style>
+        /* Base styling for nav and items */
+        nav {
+            display: flex;
+            /* flex-direction: row; */
+            justify-content: space-around;
+            flex-wrap: wrap; /* Allows items to wrap onto new lines */
+        }   
+
+        /* Mobile styles (0px - 600px) */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Tablet styles (601px - 900px) for 5 items per row */
+        @media (min-width: 601px) and (max-width: 900px) {
+            nav {
+                justify-content: space-around;
+            }
+
+            nav p {
+                flex-basis: calc(20%); /* Each item takes up 20% of the width minus the gap */
+                text-align: center; /* Centers the text inside each item */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop">
+        <nav>
+            <p>Item 1</p>
+            <p>Item 2</p>
+            <p>Item 3</p>
+            <p>Item 4</p>
+            <p>Item 5</p>
+            <p>Item 6</p>
+            <p>Item 7</p>
+            <p>Item 8</p>
+            <p>Item 9</p>
+            <p>Item 10</p>
+        </nav>
+    </div>
+</body>
+</html>

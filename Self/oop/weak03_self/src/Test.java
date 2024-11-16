@@ -5,7 +5,7 @@ public class Test {
     public static void main(String[] args) {
 
         Director director = new Director("TDM","Shankar");
-//        LocalDate dob = new LocalDat(2002,04,19);
+//        Date dob = new Date(2002,04,19);
 //        director.setDob(dob);
         LocalDate dob = LocalDate.parse("2002-04-19");
         LocalDate formattedDob = dob.withDayOfYear(01);

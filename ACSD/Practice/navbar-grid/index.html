@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Grid</title>
+
+    <style>
+        /* Base styling for nav as a grid container */
+        nav {
+            display: grid;
+            gap: 10px; /* Space between grid items */
+            grid-template-columns: repeat(10, 1fr);
+        }
+
+        nav p {
+            text-align: center; /* Centers the text inside each item */
+        }
+
+        /* Tablet layout (601px - 900px) - 2 rows with 5 items each */
+        @media (min-width: 601px) and (max-width: 900px) {
+            nav {
+                grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+            }
+        }
+
+        /* Mobile layout (0px - 600px) - 1 item per row */
+        @media (max-width: 600px) {
+            nav {
+                grid-template-columns: 1fr; /* Single column layout */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <p>Item 1</p>
+        <p>Item 2</p>
+        <p>Item 3</p>
+        <p>Item 4</p>
+        <p>Item 5</p>
+        <p>Item 6</p>
+        <p>Item 7</p>
+        <p>Item 8</p>
+        <p>Item 9</p>
+        <p>Item 10</p>
+    </nav>
+</body>
+</html>

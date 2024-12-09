@@ -1,0 +1,25 @@
+.ticket-purchase-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .ticket-card-details {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 40%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ticket-purchase-form {
+    width: 50%;
+  }
+  
+  .form-outline {
+    margin-bottom: 16px;
+  }
+  

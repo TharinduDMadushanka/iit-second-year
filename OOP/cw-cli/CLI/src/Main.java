@@ -11,6 +11,7 @@ public class Main {
     private final static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        
         SystemInitializer initializer = new SystemInitializer();
         SystemConfigDTO config = initializer.initializeSystemConfig();
         TicketPool ticketPool = new TicketPool(config);

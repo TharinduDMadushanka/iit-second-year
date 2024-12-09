@@ -1,0 +1,47 @@
+
+.dashbord{
+    padding: 30p;
+}
+
+/* ================= Left Column ================= */
+
+.left-col{
+    border: 1px solid white;
+    height: 95vh;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+
+
+.dasbord-btn{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    gap: 50px;
+
+}
+
+.dasbord-btn button{
+    /* border: 1px solid white; */
+    font-size: larger;
+    background: hsla(0, 0%, 100%, 0.812);
+    transition: 0.5s;
+}
+
+.dasbord-btn button:hover{
+    transform: scale(1.05);
+    background: hsla(0, 0%, 100%, 0.812);
+    color: black;
+    border: none;
+}
+
+
+
+/* ================= Right Column ================= */
+
+.right-col{
+    border: 1px solid white;
+    margin-left: 40px;
+    margin-top: 20px;
+}

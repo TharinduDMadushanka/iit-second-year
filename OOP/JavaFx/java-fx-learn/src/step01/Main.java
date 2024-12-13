@@ -1,6 +1,8 @@
 package step01;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -134,6 +136,7 @@ public class Main extends Application {
 
          */
 
+        /**
         // ======= Step 06: StackPane (Overlapping Nodes) ================
 
         StackPane stackPane = new StackPane();
@@ -148,6 +151,28 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+         */
+
+        // ======= Step 07: Button Click Event Using EventHandler ================
+
+        Button button = new Button("Click Me"); // Create a button
+
+        // Attach an EventHandler to handle button clicks
+        button.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Button Clicked!"); // Code triggered on click
+            }
+        });
+
+        StackPane root = new StackPane();
+        root.getChildren().add(button);
+
+        Scene scene = new Scene(root, 300, 200);
+
+        primaryStage.setTitle("Event Handling Example");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     public static void main(String[] args) {

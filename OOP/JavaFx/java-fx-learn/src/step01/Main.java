@@ -28,6 +28,8 @@ public class Main extends Application {
 
          */
 
+        /**
+
         // ======= Step 02: JavaFX Basics ================
 
         // Create a label and a button
@@ -43,6 +45,24 @@ public class Main extends Application {
 
         // Set up the stage
         primaryStage.setTitle("JavaFX Basics");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+         */
+
+        // ======= Step 03: VBox (Vertical Box) ================
+
+        VBox vbox = new VBox(10); // Vertical spacing of 10 pixels
+
+        Button button1 = new Button("Button 1");
+        Button button2 = new Button("Button 2");
+        Button button3 = new Button("Button 3");
+
+        vbox.getChildren().addAll(button1, button2, button3); // Add buttons to VBox
+        vbox.setAlignment(javafx.geometry.Pos.CENTER); // Align to center
+
+        Scene scene = new Scene(vbox, 300, 200); // Create scene
+        primaryStage.setTitle("VBox Example");
         primaryStage.setScene(scene);
         primaryStage.show();
 

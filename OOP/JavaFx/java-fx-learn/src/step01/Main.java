@@ -4,10 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -118,7 +115,38 @@ public class Main extends Application {
 
          */
 
+        /**
 
+        // ======= Step 05: GridPane (Grid-based Layout) ================
+
+        BorderPane borderPane = new BorderPane();
+
+        borderPane.setTop(new Button("Top"));
+        borderPane.setBottom(new Button("Bottom"));
+        borderPane.setLeft(new Button("Left"));
+        borderPane.setRight(new Button("Right"));
+        borderPane.setCenter(new Button("Center"));
+
+        Scene scene = new Scene(borderPane, 400, 300);
+        primaryStage.setTitle("BorderPane Example");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+         */
+
+        // ======= Step 06: StackPane (Overlapping Nodes) ================
+
+        StackPane stackPane = new StackPane();
+
+        Button btn1 = new Button("Button 1");
+        Button btn2 = new Button("Button 2");
+
+        stackPane.getChildren().addAll(btn1, btn2);
+
+        Scene scene = new Scene(stackPane, 300, 200);
+        primaryStage.setTitle("StackPane Example");
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
     }
 

@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
@@ -178,6 +179,8 @@ public class Main extends Application {
 
          */
 
+        /**
+
         // ======= Step 08: Button Click Event Using Lambda Expression ================
 
         Button button = new Button("Click Me");
@@ -193,6 +196,36 @@ public class Main extends Application {
         Scene scene = new Scene(root, 300, 200);
 
         primaryStage.setTitle("Event Handling with Lambda");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+         */
+
+        // ======= Step 09: Mouse Event Handling ================
+
+        Button button = new Button("Hover or Click Me");
+
+        // Mouse click event
+        button.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+            System.out.println("Button was clicked!");
+        });
+
+        // Mouse entered (hover) event
+        button.addEventHandler(MouseEvent.MOUSE_ENTERED, event -> {
+            System.out.println("Mouse entered the button area.");
+        });
+
+        // Mouse exited event
+        button.addEventHandler(MouseEvent.MOUSE_EXITED, event -> {
+            System.out.println("Mouse exited the button area.");
+        });
+
+        StackPane root = new StackPane();
+        root.getChildren().add(button);
+
+        Scene scene = new Scene(root, 300, 200);
+
+        primaryStage.setTitle("Mouse Event Handling Example");
         primaryStage.setScene(scene);
         primaryStage.show();
 

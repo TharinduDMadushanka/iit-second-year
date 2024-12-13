@@ -153,6 +153,8 @@ public class Main extends Application {
 
          */
 
+        /**
+
         // ======= Step 07: Button Click Event Using EventHandler ================
 
         Button button = new Button("Click Me"); // Create a button
@@ -173,6 +175,27 @@ public class Main extends Application {
         primaryStage.setTitle("Event Handling Example");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+         */
+
+        // ======= Step 08: Button Click Event Using Lambda Expression ================
+
+        Button button = new Button("Click Me");
+
+        // Use lambda expression for event handling
+        button.setOnAction(event -> {
+            System.out.println("Button Clicked with Lambda!");
+        });
+
+        StackPane root = new StackPane();
+        root.getChildren().add(button);
+
+        Scene scene = new Scene(root, 300, 200);
+
+        primaryStage.setTitle("Event Handling with Lambda");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
     }
 
     public static void main(String[] args) {

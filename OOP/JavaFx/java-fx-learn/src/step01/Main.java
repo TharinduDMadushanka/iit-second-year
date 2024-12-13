@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
@@ -201,6 +202,8 @@ public class Main extends Application {
 
          */
 
+        /**
+
         // ======= Step 09: Mouse Event Handling ================
 
         Button button = new Button("Hover or Click Me");
@@ -226,6 +229,29 @@ public class Main extends Application {
         Scene scene = new Scene(root, 300, 200);
 
         primaryStage.setTitle("Mouse Event Handling Example");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+         */
+
+        // ======= Step 10: Handling Text Input ================
+
+        Label label = new Label("Enter your name:");
+        TextField textField = new TextField();
+        Label outputLabel = new Label();
+
+        // Event handler for text input
+        textField.setOnKeyReleased(event -> {
+            String text = textField.getText();
+            outputLabel.setText("You typed: " + text);
+        });
+
+        VBox vbox = new VBox(10, label, textField, outputLabel);
+        vbox.setSpacing(10);
+
+        Scene scene = new Scene(vbox, 300, 150);
+
+        primaryStage.setTitle("Text Input Example");
         primaryStage.setScene(scene);
         primaryStage.show();
 

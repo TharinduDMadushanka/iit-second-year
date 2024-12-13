@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -50,6 +52,8 @@ public class Main extends Application {
 
          */
 
+        /**
+
         // ======= Step 03: VBox (Vertical Box) ================
 
         VBox vbox = new VBox(10); // Vertical spacing of 10 pixels
@@ -65,6 +69,56 @@ public class Main extends Application {
         primaryStage.setTitle("VBox Example");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+         */
+
+        /**
+
+        // ======= Step 04: HBox (Horizontal Box) ================
+
+        HBox hbox = new HBox(15); // Horizontal spacing of 15 pixels
+
+        Button btn1 = new Button("Button 1");
+        Button btn2 = new Button("Button 2");
+        Button btn3 = new Button("Button 3");
+
+        hbox.getChildren().addAll(btn1, btn2, btn3);
+        hbox.setAlignment(javafx.geometry.Pos.CENTER);
+
+        Scene scene = new Scene(hbox, 300, 100);
+        primaryStage.setTitle("HBox Example");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+         */
+
+        /**
+
+        // ======= Step 05: GridPane (Grid-based Layout) ================
+
+        GridPane gridPane = new GridPane();
+        gridPane.setHgap(10); // Horizontal spacing
+        gridPane.setVgap(10); // Vertical spacing
+
+        Button btn1 = new Button("Button 1");
+        Button btn2 = new Button("Button 2");
+        Button btn3 = new Button("Button 3");
+        Button btn4 = new Button("Button 4");
+
+        // Add nodes to specific grid positions
+        gridPane.add(btn1, 0, 0); // Column 0, Row 0
+        gridPane.add(btn2, 1, 0); // Column 1, Row 0
+        gridPane.add(btn3, 0, 1); // Column 0, Row 1
+        gridPane.add(btn4, 1, 1); // Column 1, Row 1
+
+        Scene scene = new Scene(gridPane, 300, 200);
+        primaryStage.setTitle("GridPane Example");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+         */
+
+
 
     }
 

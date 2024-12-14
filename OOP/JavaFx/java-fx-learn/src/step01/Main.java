@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
@@ -234,6 +235,8 @@ public class Main extends Application {
 
          */
 
+        /**
+
         // ======= Step 10: Handling Text Input ================
 
         Label label = new Label("Enter your name:");
@@ -254,6 +257,47 @@ public class Main extends Application {
         primaryStage.setTitle("Text Input Example");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+         */
+
+        // ======= JavaFX Controls and Components ================
+
+        // ======= Step 11: TextField and PasswordField ================
+
+        // Labels
+        Label nameLabel = new Label("Name:");
+        Label passwordLabel = new Label("Password:");
+
+        // Input fields
+        TextField nameField = new TextField();
+        PasswordField passwordField = new PasswordField();
+
+        // Button
+        Button submitButton = new Button("Submit");
+
+        // Action on button click
+        submitButton.setOnAction(event -> {
+            String name = nameField.getText();
+            String password = passwordField.getText();
+            System.out.println("Name: " + name + ", Password: " + password);
+        });
+
+        // Layout
+        GridPane grid = new GridPane();
+        grid.setVgap(10);
+        grid.setHgap(10);
+        grid.add(nameLabel, 0, 0);
+        grid.add(nameField, 1, 0);
+        grid.add(passwordLabel, 0, 1);
+        grid.add(passwordField, 1, 1);
+        grid.add(submitButton, 1, 2);
+
+        // Scene
+        Scene scene = new Scene(grid, 300, 200);
+        primaryStage.setTitle("TextField and PasswordField Example");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
 
     }
 
